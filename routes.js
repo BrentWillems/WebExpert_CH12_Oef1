@@ -15,4 +15,13 @@ router.get('/cars', function(req, res) {
     })
 });
 
+router.get('/cars/:id', (req, res) =>{
+    Car.findById(req.params.id, (err, car) => {
+        if(err)
+            res.send(err);
+
+        res.json(car);
+    });
+});
+
 module.exports = router;
