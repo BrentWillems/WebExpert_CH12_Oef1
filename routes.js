@@ -45,4 +45,18 @@ router.delete('/cars/:id', (req, res) => {
     });
 });
 
+router.put('/cars', (req, res) => {
+    Car.findById(req.body._id, (err, car) =>{
+        car.manufacturer = req.body.manufacturer;
+        car.model = req.body.model;
+        car.price = req.body.price;
+        car.wiki = req.body.wiki;
+
+        car.save((saveErr, saveCar) => {
+            if (saveErr)    res.send(saveErr);
+            res.send(saveCar);
+        });
+    });
+});
+
 module.exports = router;
