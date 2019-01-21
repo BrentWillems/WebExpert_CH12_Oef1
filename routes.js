@@ -38,4 +38,11 @@ router.post('/cars', (req,res) => {
     });
 })
 
+router.delete('/cars/:id', (req, res) => {
+    Car.remove({_id: req.params.id}, (err, removed) =>{
+        if (err)    res.send(err);
+        res.json(removed);
+    });
+});
+
 module.exports = router;
