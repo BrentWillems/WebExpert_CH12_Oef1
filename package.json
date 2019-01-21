@@ -1,0 +1,19 @@
+{
+  "name": "ch12_oef1",
+  "version": "1.0.0",
+  "description": "Schrijf een NodeJS Webserver met Express & Mongoose. Voor deze applicatie maak je",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/BrentWillems/WebExpert_CH12_Oef1.git"
+  },
+  "author": "Brent Willems",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/BrentWillems/WebExpert_CH12_Oef1/issues"
+  },
+  "homepage": "https://github.com/BrentWillems/WebExpert_CH12_Oef1#readme"
+}
