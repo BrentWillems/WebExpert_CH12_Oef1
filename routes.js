@@ -24,4 +24,18 @@ router.get('/cars/:id', (req, res) =>{
     });
 });
 
+router.post('/cars', (req,res) => {
+    let car = new Car({
+        manufacturer: req.body.manufacturer,
+        model: req.body.model,
+        price: req.body.price,
+        wiki: req.body.wiki
+    });
+
+    car.save((err, car) => {
+        if (err) res.send(err);
+        res.json(car);
+    });
+})
+
 module.exports = router;
